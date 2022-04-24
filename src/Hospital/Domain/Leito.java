@@ -1,7 +1,6 @@
 package Hospital.Domain;
 
-import Hospital.BancoDedados.LeitoRepository;
-import Hospital.Enum.tipoDeLeito;
+import Hospital.Domain.Enum.tipoDeLeito;
 
 public class Leito {
     private Long id;

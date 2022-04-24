@@ -1,7 +1,6 @@
 package Hospital.Domain;
 
-import Hospital.BancoDedados.UnidadeRepository;
-import Hospital.Enum.tipoDeUnidade;
+import Hospital.Domain.Enum.tipoDeUnidade;
 
 import java.util.List;
 

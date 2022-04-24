@@ -3,7 +3,7 @@ import Hospital.BancoDedados.EquipeMedicaRepository;
 import Hospital.BancoDedados.LeitoRepository;
 import Hospital.BancoDedados.PacienteRepository;
 import Hospital.Domain.*;
-import Hospital.Enum.tipoDeLeito;
+import Hospital.Domain.Enum.tipoDeLeito;
 import Hospital.*;
 
 import java.util.ArrayList;

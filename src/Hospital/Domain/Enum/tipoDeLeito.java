@@ -1,4 +1,4 @@
-package Hospital.Enum;
+package Hospital.Domain.Enum;
 
 public enum tipoDeLeito {
     QUARENTENA,

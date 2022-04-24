@@ -1,7 +1,7 @@
 package Hospital.Domain;
 
-import Hospital.Enum.tipoDeCargo;
-import Hospital.Enum.tipoDePermissao;
+import Hospital.Domain.Enum.tipoDeCargo;
+import Hospital.Domain.Enum.tipoDePermissao;
 
 public class Funcionario extends Pessoa {
     private Long idFuncionario;
