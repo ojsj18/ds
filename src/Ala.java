@@ -8,6 +8,34 @@ public class Ala {
     private EquipeMedica equipeMedica;
     private List<Leito> leitos;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Setor getSetor() {
+        return setor;
+    }
+
+    public void setSetor(Setor setor) {
+        this.setor = setor;
+    }
+
+    public EquipeMedica getEquipeMedica() {
+        return equipeMedica;
+    }
+
+    public void setEquipeMedica(EquipeMedica equipeMedica) {
+        this.equipeMedica = equipeMedica;
+    }
+
+    public void setLeitos(List<Leito> leitos) {
+        this.leitos = leitos;
+    }
+
     public List<Leito> getLeitos() {
         return leitos;
     }

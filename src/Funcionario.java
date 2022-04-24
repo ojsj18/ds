@@ -6,4 +6,36 @@ public class Funcionario extends Pessoa{
     private tipoDePermissao permissao;
     private tipoDeCargo cargo;
     private EquipeMedica equipeMedica;
+
+    public Setor getSetorCargo() {
+        return setorCargo;
+    }
+
+    public void setSetorCargo(Setor setorCargo) {
+        this.setorCargo = setorCargo;
+    }
+
+    public tipoDePermissao getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(tipoDePermissao permissao) {
+        this.permissao = permissao;
+    }
+
+    public tipoDeCargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(tipoDeCargo cargo) {
+        this.cargo = cargo;
+    }
+
+    public EquipeMedica getEquipeMedica() {
+        return equipeMedica;
+    }
+
+    public void setEquipeMedica(EquipeMedica equipeMedica) {
+        this.equipeMedica = equipeMedica;
+    }
 }
