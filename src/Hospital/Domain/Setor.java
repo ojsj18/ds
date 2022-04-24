@@ -1,4 +1,6 @@
-package Hospital;
+package Hospital.Domain;
+
+import Hospital.Domain.Ala;
 
 import java.util.List;
 

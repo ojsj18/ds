@@ -1,4 +1,4 @@
-package Hospital;
+package Hospital.Domain;
 
 import java.util.List;
 

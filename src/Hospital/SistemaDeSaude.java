@@ -2,6 +2,7 @@ package Hospital;
 
 import java.util.List;
 
+import Hospital.Domain.*;
 import Hospital.Enum.tipoDeLeito;
 
 /*

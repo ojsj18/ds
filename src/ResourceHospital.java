@@ -1,3 +1,5 @@
+import Hospital.BancoDedados.CHCUFPR;
+import Hospital.Domain.*;
 import Hospital.Enum.tipoDeLeito;
 import Hospital.*;
 

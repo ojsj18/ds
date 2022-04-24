@@ -1,4 +1,4 @@
-package Hospital;
+package Hospital.Domain;
 
 public class Pessoa {
     private Long id;
