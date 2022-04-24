@@ -1,6 +1,6 @@
 package Hospital.Domain;
 
-import Hospital.Domain.Ala;
+import Hospital.BancoDedados.SetorRepository;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ public class Setor {
     private String nome;
     private List<Ala> alas;
 
+    //Getter and setter
     public String getNome() {
         return nome;
     }

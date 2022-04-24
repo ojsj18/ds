@@ -1,4 +1,7 @@
 import Hospital.BancoDedados.CHCUFPR;
+import Hospital.BancoDedados.EquipeMedicaRepository;
+import Hospital.BancoDedados.LeitoRepository;
+import Hospital.BancoDedados.PacienteRepository;
 import Hospital.Domain.*;
 import Hospital.Enum.tipoDeLeito;
 import Hospital.*;
@@ -8,18 +11,21 @@ import java.util.List;
 
 public class ResourceHospital implements SistemaDeSaude {
     private CHCUFPR chcufpr;
+    private PacienteRepository pacienteRepository;
+    private LeitoRepository leitoRepository;
+    private EquipeMedicaRepository equipeMedicaRepository;
 
     @Override
     public Paciente entraPaciente(Pessoa pessoa) {
         Paciente paciente = chcufpr.buscarPaciente(pessoa.getCpf());
-        return paciente;
+        return pacienteRepository.salvaNoBD(paciente);
     }
 
     @Override
     public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica, Ala ala) {
         equipeMedica.setAla(ala);
         ala.setEquipesMedicas(equipeMedica);
-        return equipeMedica;
+        return equipeMedicaRepository.salvaNoBD(equipeMedica);
     }
 
     @Override
@@ -33,7 +39,7 @@ public class ResourceHospital implements SistemaDeSaude {
         equipeMedica.setEquipe(list);
         equipeMedica.setNome(nome);
 
-        return equipeMedica;
+        return equipeMedicaRepository.salvaNoBD(equipeMedica);
     }
 
     @Override
@@ -45,7 +51,7 @@ public class ResourceHospital implements SistemaDeSaude {
     public Leito modificaLeito(Leito leito, tipoDeLeito novoTipo, Ala novaAla) {
         leito.setTipo(novoTipo);
         leito.setAla(novaAla);
-        return leito;
+        return leitoRepository.salvaNoBD(leito);
     }
 
     @Override
@@ -53,6 +59,6 @@ public class ResourceHospital implements SistemaDeSaude {
         Leito novoLeito = new Leito();
         novoLeito.setAla(ala);
         novoLeito.setTipo(tipo);
-        return novoLeito;
+        return leitoRepository.salvaNoBD(novoLeito);
     }
 }

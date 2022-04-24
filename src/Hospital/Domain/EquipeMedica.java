@@ -9,26 +9,22 @@ public class EquipeMedica {
     private List<Funcionario> equipe;
     private Ala ala;
 
+    //Getter and setter
     public String getNome() {
         return Nome;
     }
-
     public Funcionario getChefia() {
         return chefia;
     }
-
     public void setChefia(Funcionario chefia) {
         this.chefia = chefia;
     }
-
     public List<Funcionario> getEquipe() {
         return equipe;
     }
-
     public Ala getAla() {
         return ala;
     }
-
     public void setAla(Ala ala) {
         this.ala = ala;
     }

@@ -10,6 +10,7 @@ public class Funcionario extends Pessoa {
     private tipoDeCargo cargo;
     private EquipeMedica equipeMedica;
 
+    //Getter and setter
     public Setor getSetorCargo() {
         return setorCargo;
     }

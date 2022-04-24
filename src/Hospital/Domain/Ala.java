@@ -1,5 +1,7 @@
 package Hospital.Domain;
 
+import Hospital.BancoDedados.AlaRepository;
+
 import java.util.List;
 
 public class Ala {
@@ -9,6 +11,7 @@ public class Ala {
     private EquipeMedica equipeMedica;
     private List<Leito> leitos;
 
+    //Getter and setter
     public String getNome() {
         return nome;
     }

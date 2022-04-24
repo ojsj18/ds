@@ -1,12 +1,18 @@
 package Hospital.Domain;
 
+import Hospital.BancoDedados.UnidadeRepository;
 import Hospital.Enum.tipoDeUnidade;
+
+import java.util.List;
 
 public class Unidade{
     private Long id;
     private String nome;
     private tipoDeUnidade tipo;
 
+    private List<Setor> setores;
+
+    //Getter and setter
     public Long getId() {
         return id;
     }

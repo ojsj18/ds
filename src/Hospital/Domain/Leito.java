@@ -1,5 +1,6 @@
 package Hospital.Domain;
 
+import Hospital.BancoDedados.LeitoRepository;
 import Hospital.Enum.tipoDeLeito;
 
 public class Leito {
@@ -9,6 +10,7 @@ public class Leito {
     private Paciente paciente;
     private Ala ala;
 
+    //Getter and setter
     public Boolean getDisponibilidade() {
         return disponibilidade;
     }
@@ -40,8 +42,4 @@ public class Leito {
     public Ala getAla() {
         return ala;
     }
-
-
-
-
 }
