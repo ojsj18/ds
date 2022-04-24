@@ -1,4 +1,4 @@
-package Enum;
+package Hospital.Enum;
 
 public enum tipoDePermissao {
 }

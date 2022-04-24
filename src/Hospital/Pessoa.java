@@ -1,3 +1,5 @@
+package Hospital;
+
 public class Pessoa {
     private Long id;
     private String nome;

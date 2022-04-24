@@ -1,4 +1,7 @@
-import Enum.tipoDeLeito;
+package Hospital;
+
+import Hospital.Enum.tipoDeLeito;
+
 public class Leito {
     private Long id;
     private Boolean disponibilidade;

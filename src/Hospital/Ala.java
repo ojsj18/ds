@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package Hospital;
+
 import java.util.List;
 
 public class Ala {

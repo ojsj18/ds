@@ -1,5 +1,8 @@
+package Hospital;
+
 import java.util.List;
-import Enum.tipoDeLeito;
+
+import Hospital.Enum.tipoDeLeito;
 
 /*
 Casos de Uso:
@@ -15,11 +18,11 @@ public interface SistemaDeSaude {
 
     public Paciente entraPaciente(Pessoa pessoa); //2. Dar entrada do paciente.
 
-    public Leito criarleito(int quantidade, tipoDeLeito tipo,Ala ala); //10. Criar leitos.
+    public Leito criarleito(int quantidade, tipoDeLeito tipo, Ala ala); //10. Criar leitos.
 
-    public Leito modificaLeito(Leito leito,tipoDeLeito novoTipo,Ala novaAla); //11. Modificar leitos.
+    public Leito modificaLeito(Leito leito, tipoDeLeito novoTipo, Ala novaAla); //11. Modificar leitos.
 
-    public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica,Ala ala);  //17. Vincular equipe à unidade.
+    public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica, Ala ala);  //17. Vincular equipe à unidade.
 
     public EquipeMedica criaEquipe(String nome, Funcionario[] funcionario); //18. Criar nova equipe.
 

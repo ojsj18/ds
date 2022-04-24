@@ -1,17 +1,10 @@
-import CHCUUFPR.CHCUFPR;
-import Enum.tipoDeUnidade;
-import Enum.tipoDeLeito;
+import Hospital.Enum.tipoDeLeito;
+import Hospital.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Unidade implements SistemaDeSaude {
-    private Long id;
-    private String nome;
-    private tipoDeUnidade tipo;
-    private List<Setor> setores = new ArrayList<>();
-    private List<Funcionario> funcionarios = new ArrayList<>();
-    private List<Leito> leitos = new ArrayList<>();
+public class ResourceHospital implements SistemaDeSaude {
     private CHCUFPR chcufpr;
 
     @Override
@@ -21,7 +14,7 @@ public class Unidade implements SistemaDeSaude {
     }
 
     @Override
-    public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica,Ala ala) {
+    public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica, Ala ala) {
         equipeMedica.setAla(ala);
         ala.setEquipesMedicas(equipeMedica);
         return equipeMedica;

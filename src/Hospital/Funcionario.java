@@ -1,6 +1,9 @@
-import Enum.tipoDeCargo;
-import Enum.tipoDePermissao;
-public class Funcionario extends Pessoa{
+package Hospital;
+
+import Hospital.Enum.tipoDeCargo;
+import Hospital.Enum.tipoDePermissao;
+
+public class Funcionario extends Pessoa {
     private Long idFuncionario;
     private Setor setorCargo;
     private tipoDePermissao permissao;
