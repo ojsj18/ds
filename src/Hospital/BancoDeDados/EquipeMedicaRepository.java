@@ -1,4 +1,4 @@
-package Hospital.BancoDedados;
+package Hospital.BancoDeDados;
 
 import Hospital.Domain.EquipeMedica;
 

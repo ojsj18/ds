@@ -1,7 +1,5 @@
 package Hospital.Domain;
 
-import Hospital.BancoDedados.SetorRepository;
-
 import java.util.List;
 
 public class Setor {

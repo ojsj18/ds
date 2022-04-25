@@ -1,7 +1,6 @@
-package Hospital.BancoDedados;
+package Hospital.BancoDeDados;
 
 import Hospital.Domain.Ala;
-import Hospital.Domain.Leito;
 
 public interface AlaRepository {
     Ala buscaAla(Long IdAla);

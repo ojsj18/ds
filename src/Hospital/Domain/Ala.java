@@ -1,7 +1,5 @@
 package Hospital.Domain;
 
-import Hospital.BancoDedados.AlaRepository;
-
 import java.util.List;
 
 public class Ala {

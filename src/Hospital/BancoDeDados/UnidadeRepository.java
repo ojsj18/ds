@@ -1,6 +1,5 @@
-package Hospital.BancoDedados;
+package Hospital.BancoDeDados;
 
-import Hospital.Domain.Ala;
 import Hospital.Domain.Unidade;
 
 public interface UnidadeRepository {
