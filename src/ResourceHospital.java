@@ -23,7 +23,7 @@ public class ResourceHospital implements SistemaDeSaude {
     private EquipeMedicaRepository equipeMedicaRepository;
 
     @Override
-    public Paciente entraPaciente(Pessoa pessoa) {
+    public Paciente entrarPaciente(Pessoa pessoa) {
         Paciente paciente = chcufpr.buscarPaciente(pessoa.getCpf());
         return pacienteRepository.salvaNoBD(paciente);
     }
@@ -55,7 +55,7 @@ public class ResourceHospital implements SistemaDeSaude {
     }
 
     @Override
-    public Leito modificaLeito(Leito leito, tipoDeLeito novoTipo, Ala novaAla) {
+    public Leito modificaLeitos(Leito leito, tipoDeLeito novoTipo, Ala novaAla) {
         leito.setTipo(novoTipo);
         leito.setAla(novaAla);
         return leitoRepository.salvaNoBD(leito);

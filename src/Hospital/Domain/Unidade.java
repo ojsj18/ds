@@ -8,7 +8,6 @@ public class Unidade{
     private Long id;
     private String nome;
     private tipoDeUnidade tipo;
-
     private List<Setor> setores;
 
     //Getter and setter
@@ -34,5 +33,28 @@ public class Unidade{
 
     public void setTipo(tipoDeUnidade tipo) {
         this.tipo = tipo;
+    }
+
+    public void mapaLeitosOcupados(Long alaId, Long setorId, String andarId) {
+        List<Leito> leitos_encontrados = new ArrayList<>();
+        
+        for(Setor setor : setores) { 
+            // busca setor correto
+            if(setor.getId() == setorId) { 
+                for (Ala ala : setor.getAlas()){
+                    // busca setor correto
+                    if(ala.getId() == alaId){
+                        // adiciona os leitos deste setor à lista que será retornada
+                        for (Leito leito : ala.getLeitos()){
+                            leitos_encontrados.add(leito);
+                        }
+                        
+                    }
+                }
+
+            }
+        }
+        
+        return leitos_encontrados;
     }
 }

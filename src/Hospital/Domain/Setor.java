@@ -8,6 +8,10 @@ public class Setor {
     private List<Ala> alas;
 
     //Getter and setter
+    public String getId() {
+        return id;
+    }
+
     public String getNome() {
         return nome;
     }

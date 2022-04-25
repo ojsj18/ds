@@ -7,8 +7,8 @@ import Hospital.Domain.Enum.tipoDeLeito;
 
 /*
 Casos de Uso:
-• 3. Solicitar leito.
-• 10. Criar leitos,
+• 2. Dar entrada do paciente.
+• 10. Criar leitos.
 • 11. Modificar leitos,
 • 17. Vincular equipe à unidade.
 • 18. Criar nova equipe.
@@ -17,11 +17,11 @@ Casos de Uso:
 
 public interface SistemaDeSaude {
 
-    public Paciente entraPaciente(Pessoa pessoa); //2. Dar entrada do paciente.
+    public Paciente entrarPaciente(Pessoa pessoa); //2. Dar entrada do paciente.
 
     public Leito criarleito(int quantidade, tipoDeLeito tipo, Ala ala); //10. Criar leitos.
 
-    public Leito modificaLeito(Leito leito, tipoDeLeito novoTipo, Ala novaAla); //11. Modificar leitos.
+    public Leito modificaLeitos(Leito leito, tipoDeLeito novoTipo, Ala novaAla); //11. Modificar leitos.
 
     public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica, Ala ala);  //17. Vincular equipe à unidade.
 

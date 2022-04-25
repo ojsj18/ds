@@ -8,6 +8,10 @@ public class Pessoa {
 
 
     //Getter and setter
+    public String getId() {
+        return cpf;
+    }
+
     public String getCpf() {
         return cpf;
     }
