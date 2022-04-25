@@ -3,6 +3,7 @@ import Hospital.BancoDeDados.EquipeMedicaRepository;
 import Hospital.BancoDeDados.LeitoRepository;
 import Hospital.BancoDeDados.PacienteRepository;
 import Hospital.BancoDeDados.UnidadeRepository;
+import Hospital.BancoDeDados.AlaRepository;
 import Hospital.Domain.*;
 import Hospital.*;
 
@@ -24,7 +25,7 @@ public class InterfaceHospital implements Menu {
     private UnidadeRepository unidadeRepository;
 
     @Override
-    public Bool solicitaLeito(String identificacao_paciente, tipoDeUrgencia urgencia, tipoDeLeito tipo_leito) {
+    public Unidade solicitaLeito(String identificacao_paciente, tipoDeUrgencia urgencia, tipoDeLeito tipo_leito) {
         Paciente paciente = chcufpr.buscarPaciente(identificacao_paciente);
         paciente.getProntuarioEletronico().setUrgencia(urgencia);
         
@@ -33,45 +34,52 @@ public class InterfaceHospital implements Menu {
         
         paciente.setLeito(leito_vago);
 
-        return pacienteRepository.salvaPedidoLeito(Paciente paciente, Leito leito);
+        return UnidadeRepository.salvaPedidoLeito(Paciente paciente, Leito leito);
     }
 
     @Override
-    public Bool pacienteParaLeito(String identificacao_paciente, Long identificacao_leito){
+    public Paciente pacienteParaLeito(String identificacao_paciente, Long identificacao_leito){
         Leito leito = leitoRepository.buscaLeito(identificacao_leito);
         Paciente paciente = chcufpr.buscarPaciente(identificacao_paciente);
 
         leito.setPaciente(leito);
+        return pacienteRepository.salvaNoBD(paciente);
     }
 
     @Override
-    public Bool atualizaEstado(Long alaId, Long setorId, String andarId, Long unidadeId, Long idInternoPaciente, tipoDePaciente statusPaciente){
+    public Paciente atualizaEstado(Long alaId, Long setorId, String andarId, Long unidadeId, Long idInternoPaciente, tipoDePaciente statusPaciente){
         Unidade unidade = unidadeRepository.buscaUnidade(unidadeId);
         List<Leito> leitos = unidade.mapaLeitosOcupados();
 
-        for(Leito leito : leitos) { 
+        for(Leito leito : leitos){ 
             // busca setor correto
             Paciente paciente = leito.getPaciente();
             if(paciente.getIdInterno() == idInternoPaciente) { 
                 paciente.setTipoDePaciente(statusPaciente);
+                return PacienteRepository.salvaNoBD(paciente);;
             }
         }
     }
 
     @Override
-    public Bool liberaLeito(String identificacao_paciente, Long identificacao_leito){
+    public Leito liberaLeito(String identificacao_paciente, Long identificacao_leito){
         Paciente paciente = chcufpr.buscarPaciente(identificacao_paciente);
         Leito leito = paciente.getLeito();
         leito.setPaciente(null);
         paciente.setLeito(null);
+
+        PacienteRepository.salvaNoBD(paciente);
+        return LeitoRepository.salvaNoBD(leito);
     }
 
     @Override
-    public Bool criarAla(String identificacao_paciente, Long identificacao_leito){
-        Paciente paciente = chcufpr.buscarPaciente(identificacao_paciente);
-        Leito leito = paciente.getLeito();
-        leito.setPaciente(null);
-        paciente.setLeito(null);
+    public Ala criarAla(String nomeAla, Setor setor){
+        Ala ala = new Ala();
+        ala.setNome(nomeAla);
+        ala.setSetor(setor);
+        setor.criarAla(ala);
+
+        return AlaRepository.salvaNoBD(ala);
     }
 
 }

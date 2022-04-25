@@ -35,10 +35,10 @@ public class Unidade{
         this.tipo = tipo;
     }
 
-    public void mapaLeitosOcupados(Long alaId, Long setorId, String andarId) {
+    public void mapaLeitosOcupados(Long alaId, Long setorId) {
         List<Leito> leitos_encontrados = new ArrayList<>();
         
-        for(Setor setor : setores) { 
+        for(Setor setor : this.setores) { 
             // busca setor correto
             if(setor.getId() == setorId) { 
                 for (Ala ala : setor.getAlas()){

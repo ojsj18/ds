@@ -27,4 +27,10 @@ public class Setor {
     public void setAlas(List<Ala> alas) {
         this.alas = alas;
     }
+
+    public Ala criarAla(Ala ala){
+        this.alas.add(ala);
+        
+        return ala;
+    }
 }
