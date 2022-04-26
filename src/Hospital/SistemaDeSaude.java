@@ -29,4 +29,5 @@ public interface SistemaDeSaude {
 
     public List<Leito> mapaLeitos(Ala ala); //23. Consultar mapa de leitos.
 
+
 }

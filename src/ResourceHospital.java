@@ -31,7 +31,6 @@ public class ResourceHospital implements SistemaDeSaude {
     @Override
     public EquipeMedica equipeParaUnidade(EquipeMedica equipeMedica, Ala ala) {
         equipeMedica.setAla(ala);
-        ala.setEquipesMedicas(equipeMedica);
         return equipeMedicaRepository.salvaNoBD(equipeMedica);
     }
 
@@ -68,4 +67,5 @@ public class ResourceHospital implements SistemaDeSaude {
         novoLeito.setTipo(tipo);
         return leitoRepository.salvaNoBD(novoLeito);
     }
+
 }

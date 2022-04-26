@@ -2,6 +2,7 @@ package Hospital.Domain;
 
 import Hospital.Domain.Enum.tipoDeUnidade;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Unidade{
@@ -10,7 +11,13 @@ public class Unidade{
     private tipoDeUnidade tipo;
     private List<Setor> setores;
 
+
     //Getter and setter
+
+    public List<Setor> getSetores() {
+        return setores;
+    }
+
     public Long getId() {
         return id;
     }
@@ -35,26 +42,4 @@ public class Unidade{
         this.tipo = tipo;
     }
 
-    public void mapaLeitosOcupados(Long alaId, Long setorId) {
-        List<Leito> leitos_encontrados = new ArrayList<>();
-        
-        for(Setor setor : this.setores) { 
-            // busca setor correto
-            if(setor.getId() == setorId) { 
-                for (Ala ala : setor.getAlas()){
-                    // busca setor correto
-                    if(ala.getId() == alaId){
-                        // adiciona os leitos deste setor à lista que será retornada
-                        for (Leito leito : ala.getLeitos()){
-                            leitos_encontrados.add(leito);
-                        }
-                        
-                    }
-                }
-
-            }
-        }
-        
-        return leitos_encontrados;
-    }
 }

@@ -5,11 +5,11 @@ import Hospital.Domain.Enum.tipoDeUrgencia;
 
 public class ProntuarioEletronico {
     private Long codigo_cid;
-    private Bool cirurgia_eletiva;
+    private Boolean cirurgia_eletiva;
     private tipoDeUrgencia urgencia;
 
     //Getter and setter
-    public String getCodigoCID() {
+    public Long getCodigoCID() {
         return codigo_cid;
     }
 
@@ -17,15 +17,15 @@ public class ProntuarioEletronico {
         this.codigo_cid = codigo_cid;
     }
 
-    public Bool getCirurgiaEletiva() {
+    public Boolean getCirurgiaEletiva() {
         return cirurgia_eletiva;
     }
 
-    public void setCirurgiaEletiva(Bool cirurgia_eletiva) {
+    public void setCirurgiaEletiva(Boolean cirurgia_eletiva) {
         this.cirurgia_eletiva = cirurgia_eletiva;
     }
 
-    public Urgencia getUrgencia() {
+    public tipoDeUrgencia getUrgencia() {
         return urgencia;
     }
 

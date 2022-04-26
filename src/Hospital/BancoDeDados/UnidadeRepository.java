@@ -1,5 +1,7 @@
 package Hospital.BancoDeDados;
 
+import Hospital.Domain.Leito;
+import Hospital.Domain.Paciente;
 import Hospital.Domain.Unidade;
 
 public interface UnidadeRepository {
@@ -7,5 +9,4 @@ public interface UnidadeRepository {
 
     Unidade salvaNoBD(Unidade unidade);
 
-    Unidade salvaPedidoLeito(Paciente paciente, Leito leito);
 }

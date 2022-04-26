@@ -3,7 +3,7 @@ package Hospital.Domain;
 import Hospital.Domain.Enum.tipoDePaciente;
 
 public class Paciente extends Pessoa {
-    private Long idInterno;
+    private String idInterno;
     private ProntuarioEletronico prontuario;
     private Leito leito;
     private tipoDePaciente statusPaciente;
@@ -12,19 +12,19 @@ public class Paciente extends Pessoa {
         return this.idInterno;
     }
 
-    public String getProntuarioEletronico() {
+    public ProntuarioEletronico getProntuarioEletronico() {
         return this.prontuario;
     }
 
-    public String setProntuarioEletronico(ProntuarioEletronico prontuario) {
+    public void setProntuarioEletronico(ProntuarioEletronico prontuario) {
         this.prontuario = prontuario;
     }
 
-    public String getLeito() {
+    public Leito getLeito() {
         return this.leito;
     }
     
-    public String setLeito(Leito leito) {
+    public void setLeito(Leito leito) {
         this.leito = leito;
     }
 
