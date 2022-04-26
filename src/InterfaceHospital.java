@@ -52,7 +52,7 @@ public class InterfaceHospital implements Menu {
     @Override
     public Paciente atualizaEstado(Long alaId, String setorId, String andarId, Long unidadeId, String idInternoPaciente, tipoDePaciente statusPaciente){
         Unidade unidade = unidadeRepository.buscaUnidade(unidadeId);
-        List<Leito> leitos = mapaLeitosOcupados(alaId,setorId,uni);
+        List<Leito> leitos = mapaLeitosOcupados(alaId,setorId,unidadeId);
 
         for(Leito leito : leitos){ 
             // busca setor correto
